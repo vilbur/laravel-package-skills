@@ -1,6 +1,8 @@
 # Laravel package - skills<br>
 * optimized for Vue.js & Bulma
 
+## Dependencies
+[vue-router](https://github.com/vuejs/vue-router)<br>
 
 ### Install
 ``` bash
