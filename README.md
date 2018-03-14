@@ -1,47 +1,35 @@
-# Skills Package For Laravel Framework
-Package skills.<br>
-Ready for development and installation.
-
-1. [Create folder for package.](#create-folder-for-package)<br>
-2. [Checkout repository.](#checkout-repository)<br>
-3. [Set path for development installation.](#set-path-for-development-installation)<br>
-4. [Install package locally.](#install-package-locally)<br>
+# Laravel package - skills<br>
+* optimized for Vue.js & Bulma
 
 
-### Create folder for package
-application\packages\\__vilbur\skills__
-
-
-### Checkout repository
-In folder application\packages\vilbur\skills run command below.
-``` bash
-git init &&git remote add origin https://github.com/vilbur/laravel-package-skills.git &&git pull origin master
-```
-
-
-### Set path for development installation
-Add to __application\composer.json__.
-``` json
-"repositories": {
-    "skills": {
-        "type": "path",
-        "url": "packages/vilbur/skills",
-        "options": {
-            "symlink": true
-        }
-    }
-}
-```
-
-### Install package locally
+### Install
 ``` bash
 composer require vilbur/skills @dev
 ```
 
-### Test in Laravel
-``` html
-http://your-domain/skills
+### Publish files
+``` bash
+php artisan vendor:publish --tag="vilbur/skills'"
 ```
 
-### Search and replace in file contents, filenames and folders
-Run __ContentAndPathReplacer.exe__ and replace "skills" with your package name
+### app.js
+``` javascript
+
+// import vilbur-skills view
+const Skills	= () => import('./skills/views/skills.vue');
+
+// routes for vue-router
+const router = new VueRouter({
+	routes:{
+		path:	'/skills',
+		name:	'skills',
+		component:	Skills
+	},
+});
+```
+
+### app.scss
+``` scss
+@import 'skills/skills.scss';
+```
+

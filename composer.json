@@ -1,0 +1,45 @@
+{
+    "name": "vilbur/skills",
+    "type": "library",
+    "description": "Skills for development of packages for Laravel",
+    "keywords": [
+        "vilbur",
+        "Skills"
+    ],
+    "homepage": "https://github.com/vilbur/laravel-package-skills",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":vilbur",
+            "email": "cerny.vil@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Vilbur\\Skills\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vilbur\\Skills\\": "tests/"
+        }
+    },
+    "extra": {
+		"laravel": {
+            "providers": [
+                "Vilbur\\Skills\\Providers\\SkillsServiceProvider"
+            ],
+            "aliases": {
+				"Skills":"Vilbur\\Skills\\Skills"
+			}
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
