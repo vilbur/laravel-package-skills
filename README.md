@@ -1,37 +1,39 @@
-# Laravel package - skills<br>
-* optimized for Vue.js & Bulma
+# Laravel package - skills<br>  
+* optimized for Vue.js & Bulma  
 
-## Dependencies
-[vue-router](https://github.com/vuejs/vue-router)<br>
+## Dependencies  
+[vue-router](https://github.com/vuejs/vue-router)<br>  
 
-### Install
-``` bash
-composer require vilbur/skills @dev
-```
+### Install  
+``` bash  
+composer require vilbur/skills @dev  
+```  
 
-### Publish files
-``` bash
-php artisan vendor:publish --tag="vilbur/skills'"
-```
+### Publish files  
+``` bash  
+php artisan vendor:publish --tag="vilbur/skills'"  
+```  
 
-### app.js
-``` javascript
+### app.js  
+``` javascript  
 
-// import vilbur-skills view
-const Skills	= () => import('./skills/views/skills.vue');
+// import vilbur-skills view  
+const Skills	= () => import('./skills/views/skills.vue');  
 
-// routes for vue-router
-const router = new VueRouter({
-	routes:{
-		path:	'/skills',
-		name:	'skills',
-		component:	Skills
-	},
-});
-```
+// routes for vue-router  
+const router = new VueRouter({  
+	routes:  
+	{  
+		path:	'/skills',  
+		name:	'skills',  
+		component:	Skills  
+	},  
+});  
+```  
 
-### app.scss
-``` scss
-@import 'skills/skills.scss';
-```
+### app.scss  
+``` scss  
+@import 'skills/skills.scss';  
+```  
 
+  
