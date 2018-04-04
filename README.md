@@ -1,8 +1,8 @@
-# Laravel package - skills<br>  
+# Laravel package - skills  
 * optimized for Vue.js & Bulma  
 
 ## Dependencies  
-[vue-router](https://github.com/vuejs/vue-router)<br>  
+[vue-router](https://github.com/vuejs/vue-router)  
 
 ### Install  
 ``` bash  
@@ -11,7 +11,7 @@ composer require vilbur/skills @dev
 
 ### Publish files  
 ``` bash  
-php artisan vendor:publish --tag="vilbur/skills'"  
+php artisan vendor:publish --tag="vilbur/skills"  
 ```  
 
 ### app.js  
