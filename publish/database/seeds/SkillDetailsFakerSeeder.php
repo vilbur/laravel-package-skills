@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Vilbur\Skills\Models\SkillDetail;
 
-class SkillDetailsSeeder extends Seeder
+class SkillDetailsFakerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
