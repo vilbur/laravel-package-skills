@@ -12,18 +12,18 @@ class SkillsDatabaseSeeder extends Seeder
      */
     public function run()
     {
-		/** Faker
-		 */
-		$this->call(CategorySkillsFakerSeeder::class);
-		$this->call(SkillsFakerSeeder::class);
-		$this->call(SkillDetailsFakerSeeder::class);		
-		
-		/** Production  
-		 */		
-		//$this->call(CategorySkillsTableSeeder::class);
-		//$this->call(SkillsTableSeeder::class);
-		//$this->call(SkillDetailsTableSeeder::class);
-		
+		if (\App::environment('faker'))
+		{
+			$this->call(CategorySkillsFakerSeeder::class);
+			$this->call(SkillsFakerSeeder::class);
+			$this->call(SkillDetailsFakerSeeder::class);
+		}
+		else
+		{
+			$this->call(CategorySkillsTableSeeder::class);
+			$this->call(SkillsTableSeeder::class);
+			$this->call(SkillDetailsTableSeeder::class);
+		}
     }
 }
 
