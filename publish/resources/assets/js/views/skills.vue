@@ -1,12 +1,16 @@
 <template>
 	<div id="vilbur-skills">
 		
-		<ul class="tabs is-centered is-fixed-top" style="margin-top:180px">
-			<li><a @click.prevent="filtered=''">All</a></li>
-			<li v-for="category in categories">
-				<a @click.prevent="filtered=category.slug">{{ category.slug }}</a>
-			</li>
-		</ul>
+		<div class="tabs is-centered">
+	
+			<ul class="category-nav">
+				<a :class="{'is-active': filtered==''}" @click.prevent="filtered=''">All</a>
+				<li v-for="category in categories" class="category-filter">
+					<a :class="{'is-active': filtered==category.slug}" @click.prevent="filtered=category.slug">{{ category.slug }}</a>
+				</li>
+			</ul>
+			
+		</div>
 		
 		<transition-group tag="ul" name="show">
 			<li v-for="skill in filteredSkills" class="hero" :key="skill.id" >
