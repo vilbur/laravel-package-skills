@@ -15,7 +15,7 @@ class CreateCategorySkillsTable extends Migration
 		Schema::create('category_skills', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('slug')->nullable();
-			$table->string('title',\Config::get('migrations.lenght.title'))->nullable();
+			$table->string('title')->nullable();
 			$table->timestamps();
 		});
 

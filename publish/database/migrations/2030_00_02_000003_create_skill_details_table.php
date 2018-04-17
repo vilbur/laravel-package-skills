@@ -18,9 +18,9 @@ class CreateSkillDetailsTable extends Migration
 			$table->integer('skill_id')->nullable()->unsigned()->index();
 			$table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');
 
-			$table->string('title',\Config::get('migrations.lenght.title'))->nullable();
-			$table->string('summary',\Config::get('migrations.lenght.summary'))->nullable();
-			$table->string('description',\Config::get('migrations.lenght.description'))->nullable();
+			$table->string('title')->nullable();
+			$table->string('summary')->nullable();
+			$table->text('description')->nullable();
 			$table->timestamps();
 		});
 
